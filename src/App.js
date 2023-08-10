@@ -1,24 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import AddUser from "./components/Users/AddUser";
+import ListUsers from "./pages/ListUsers";
+import EditUser from "./components/Users/EditUser";
+import AddContent from "./components/Contents/AddContent";
+import GetContents from "./components/Contents/GetContents";
+import GetContentsAdmin from "./components/Contents/GetContentsAdmin";
+import Auth from "./pages/Auth";
+import Login from "./components/Auth/Login";
+import Register from "./components/Auth/Register";
+import "tailwindcss/tailwind.css"
+import ReportContent from "./components/Contents/ReportContent";
+import Admin from "./pages/Admin";
+import Notifications from "./components/Users/Notifications";
+import MessageContent from "./components/Contents/MessageContent";
 
-function App() {
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="container" >
+        <Routes>
+          <Route path="/" element={<Auth />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/list-users" element={<ListUsers />} />
+          <Route path="/admin" element={<Admin />} />
+          <Route path="/add" element={<AddUser />} />
+          <Route path="/edit/:id" element={<EditUser />} />
+          <Route path="/upload" element={<AddContent />} />
+          <Route path="/content" element={<GetContents />} />
+          <Route path="/content-admin" element={<GetContentsAdmin />} />
+          <Route path='/report/:id' element={<ReportContent />} />
+          <Route path='/messages' element={<MessageContent />} />
+          <Route path="/notifications" element={<Notifications />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
