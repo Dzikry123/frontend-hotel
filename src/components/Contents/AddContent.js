@@ -49,7 +49,7 @@ const AddContent = () => {
       else {
         setLoading(true)
 
-        const response = await axios.post("http://localhost:5000/content", {
+        const response = await axios.post("https://hotel-backend-nine.vercel.app/content", {
           name,
           amount,
           desc,
