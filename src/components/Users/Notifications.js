@@ -27,7 +27,7 @@ const Notifications = () => {
 
   const deleteMessage = async (messageId) => {
     try {
-      const response = await axios.delete(`http://localhost:5000/messages/${messageId}`)
+      const response = await axios.delete(`https://hotel-backend-nine.vercel.app/messages/${messageId}`)
       setMessages(response.data)
       if (response.status === 200) {
         alert('Delete message successfully')
