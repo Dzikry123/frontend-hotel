@@ -13,57 +13,6 @@ const GetContents = () => {
   const { id } = useParams(); // Use the useParams hook to access the content ID
   const [deleted, setDeleted] = useState("")
 
-
-  // const date = setContent(createdAt)
-  // const time = setContent(createdAt)
-  // const formattedDate = date
-  // const formattedTimeStamp =
-
-
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     const res = await axios.get(`http://localhost:5000/content?q=${searchQuery}`);
-  //     setData(res.data);
-  //     console.log(data);
-  //   };
-  //   if (searchQuery.length === 0 || searchQuery.length < 2) {
-  //     setData([]);
-  //   } else {
-  //     fetchData()
-  //   }
-  // }, [searchQuery]);
-
-
-  // useEffect(() => {
-  //   handleSearch();
-  // }, [])
-
-  // const handleSearch = async () => {
-  //   // try {
-  //   //   const response = await axios.get(`http://localhost:5000/content?name=${searchQuery}%7C%7Cdesc=${searchQuery}%7C%7Carea=${searchQuery}%7C%7Cstatus=${searchQuery}`);
-  //   //   setData(response.data);
-  //   //   console.log(response.data);
-  //   // } catch (error) {
-  //   //   console.error('Error searching:', error);
-  //   // }
-
-  //   const filteredContents = data.filter((content) => {
-  //     const { name, desc, area, status } = content;
-  //     const query = searchQuery.toLowerCase();
-
-  //     return (
-  //       name.toLowerCase().includes(query) ||
-  //       desc.toLowerCase().includes(query) ||
-  //       area.toLowerCase().includes(query) ||
-  //       status.toLowerCase().includes(query)
-  //     );
-  //   });
-
-  //   setData(filteredContents);
-  //   return data;
-
-  // };
-
   const handleSearch = async (e) => {
     let query = e.target.value
     if (query) {

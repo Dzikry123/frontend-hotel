@@ -4,8 +4,6 @@ import BackgroundImage from '../../img/pexels-cottonbro-studio-4253300.jpg'
 import { auth } from '../../config/Firebase';
 import { createUserWithEmailAndPassword, signOut } from 'firebase/auth';
 
-
-
 const Register = () => {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
@@ -20,7 +18,7 @@ const Register = () => {
       alert('User Registration Successful')
       // Proceed with your registration logic or navigate to the desired page
       // ...
-      alert('User successfully signed in');
+      alert('Please Sign in again with your email and password');
       navigate('/')
     } catch (error) {
       const errorCode = error.code;
@@ -49,10 +47,10 @@ const Register = () => {
         backgroundPosition: 'center',
       }}
     >
-      <div className="bg-white shadow-lg rounded px-8 pt-12 pb-8 mb-4 w-1/3">
-        <h2 className="text-2xl font-bold mb-10 text-center">Hotel Management</h2>
-        <h5 className="text-small font-bold mb-6 text-center">( Register Form )</h5>
-        <div className="mb-6">
+      <div className="bg-white shadow-lg rounded px-8 pt-12 pb-8 mb-4 lg:w-1/3 md:w-1/2">
+        <h2 className="text-2xl font-bold mb-6 md:mb-10 text-center">Hotel Management</h2>
+        <h5 className="text-small font-bold mb-4 md:mb-6 text-center">( Register Form )</h5>
+        <div className="mb-4 md:mb-6">
           <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="username">
             Email
           </label>
@@ -65,37 +63,36 @@ const Register = () => {
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>
-        <div className="mb-8">
+        <div className="mb-4 md:mb-8">
           <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="password">
             Password
           </label>
           <input
-            className="shadow appearance-none border border-red rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+            className="shadow appearance-none border border-red rounded w-full py-2 px-3 text-gray-700 mb-1 md:mb-3 leading-tight focus:outline-none focus:shadow-outline"
             id="password"
             type="password"
             placeholder="********"
             required
             onChange={(e) => setPassword(e.target.value)}
-
           />
-          <p className="text-red-500 text-xs italic">Minimun 6 characters.</p>
+          <p className="text-red-500 text-xs italic md:hidden">Minimun 6 characters.</p>
         </div>
         <div className="flex flex-col items-center">
-          <p className="text-sm text-gray-700 mb-5">
+          <p className="text-sm text-gray-700 mb-4 md:mb-5">
             already have an account?{' '}
             <Link to="/login" className="text-blue-500 hover:text-blue-800">
               Login here
             </Link>
           </p>
           <button
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded focus:outline-none focus:shadow-outline"
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 md:px-8 rounded focus:outline-none focus:shadow-outline mb-2 md:mb-3"
             type="submit"
             onClick={signIn}
           >
             Sign Up
           </button>
           <button
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded focus:outline-none focus:shadow-outline"
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 md:px-8 rounded focus:outline-none focus:shadow-outline"
             type="submit"
             onClick={logout}
           >

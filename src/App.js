@@ -13,6 +13,7 @@ import ReportContent from "./components/Contents/ReportContent";
 import Admin from "./pages/Admin";
 import Notifications from "./components/Users/Notifications";
 import MessageContent from "./components/Contents/MessageContent";
+import DetailNotification from "./components/Users/DetailNotification";
 
 
 const App = () => {
@@ -33,6 +34,7 @@ const App = () => {
           <Route path='/report/:id' element={<ReportContent />} />
           <Route path='/messages' element={<MessageContent />} />
           <Route path="/notifications" element={<Notifications />} />
+          <Route path="/detail-notification/:id" element={<DetailNotification />} />
         </Routes>
       </div>
     </Router>

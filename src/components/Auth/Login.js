@@ -38,7 +38,7 @@ const Login = () => {
         backgroundPosition: 'center',
       }}
     >
-      <div className="bg-white shadow-lg rounded px-8 pt-12 pb-8 mb-4 w-1/3">
+      <div className="bg-white shadow-lg rounded px-8 pt-12 pb-8 mb-4 lg:w-1/3 md:w-1/2">
         <h2 className="text-2xl font-bold mb-6 text-center">Hotel Management</h2>
         <div className="mb-6">
           <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="username">
