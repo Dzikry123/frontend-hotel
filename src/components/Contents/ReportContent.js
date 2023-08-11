@@ -13,7 +13,7 @@ const ReportContent = () => {
     // Fetch data based on the content ID
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/content/${id}`);
+        const response = await axios.get(`https://hotel-backend-nine.vercel.app/content/${id}`);
         setContent(response.data);
         console.log(response.data)
       } catch (error) {
