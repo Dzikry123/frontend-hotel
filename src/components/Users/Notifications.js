@@ -17,7 +17,7 @@ const Notifications = () => {
 
   const getNotifications = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/messages")
+      const response = await axios.get("https://hotel-backend-nine.vercel.app/messages")
       setMessages(response.data)
       console.log(response.data);
     } catch (error) {
