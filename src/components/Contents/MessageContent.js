@@ -13,7 +13,7 @@ const MessageContent = () => {
     e.preventDefault()
     try {
       setLoading(true)
-      const response = await axios.post("http://localhost:5000/messages", {
+      const response = await axios.post("https://hotel-backend-nine.vercel.app/", {
         name,
         message,
       })
