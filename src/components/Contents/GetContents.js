@@ -16,7 +16,8 @@ const GetContents = () => {
   const handleSearch = async (e) => {
     let query = e.target.value
     if (query) {
-      const response = await axios.get(`https://hotel-backend-nine.vercel.app/content?name=${query}`)
+      const response = await axios.get(`https://hotel-backend-xi.vercel.app
+/content?name=${query}`)
       if (response) {
         setContent(response.data);
         console.log(response.data);
@@ -31,7 +32,8 @@ const GetContents = () => {
   }, []);
 
   const getContent = async () => {
-    const response = await axios.get('https://hotel-backend-nine.vercel.app/content');
+    const response = await axios.get('https://hotel-backend-xi.vercel.app
+/content');
     setContent(response.data);
     console.log(response.data);
   };
